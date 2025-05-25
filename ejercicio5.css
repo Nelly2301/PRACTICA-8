@@ -1,0 +1,55 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el body ocupe el 100% de la altura de la ventana */
+    font-family: Arial, sans-serif;
+}
+
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* El contenedor principal ocupa al menos el 100% de la altura de la ventana */
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height: 80px; /* El header y footer deben tener altura fija [cite: 17] */
+    box-sizing: border-box; /* Para incluir el padding en la altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.content-area {
+    display: flex;
+    flex-grow: 1; /* Permite que el área de contenido ocupe el espacio vertical restante */
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    width: 200px; /* El sidebar siempre ocupa 200px de ancho [cite: 16, 17] */
+    padding: 20px;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Evita que el sidebar se encoja [cite: 18] */
+    font-size: 1.1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background-color: #e0e0e0;
+    flex-grow: 1; /* El main debe ajustarse al espacio restante [cite: 18] */
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

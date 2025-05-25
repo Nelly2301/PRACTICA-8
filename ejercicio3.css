@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.menu-header {
+    background-color: #333; /* El menú debe tener un fondo oscuro [cite: 10] */
+    padding: 10px 0;
+}
+
+.nav-links {
+    display: flex; /* Usa Flexbox [cite: 8] */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around; /* Espaciar los enlaces al máximo posible en pantallas grandes [cite: 8] */
+    align-items: center;
+}
+
+.nav-links li a {
+    color: white; /* Texto blanco [cite: 10] */
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block; /* Para que el padding funcione en toda el área del enlace */
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* En móviles (menos de 500px) [cite: 9] */
+@media (max-width: 500px) {
+    .nav-links {
+        flex-direction: column; /* Que los enlaces se apilen verticalmente [cite: 9] */
+        align-items: stretch; /* Ocupen todo el ancho [cite: 9] */
+    }
+
+    .nav-links li {
+        width: 100%; /* Asegura que cada elemento de la lista ocupe el ancho completo */
+        text-align: center;
+    }
+
+    .nav-links li a {
+        padding: 10px 0; /* Ajusta el padding para el diseño vertical */
+    }
+}

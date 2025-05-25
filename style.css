@@ -1,0 +1,224 @@
+/* Estilos Generales y Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Reset de márgenes/padding [cite: 25] */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Fuente legible [cite: 25] */
+    background-color: #f8f5ed; /* Fondo claro [cite: 25] */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+    background-color: #5C4033; /* Fondo marrón oscuro [cite: 27] */
+    color: white; /* Texto blanco [cite: 27] */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex; /* Usar Flexbox para organizar la navegación en fila [cite: 25] */
+    justify-content: space-between; /* Centrado, menú horizontal [cite: 27] */
+    align-items: center; /* Enlaces de navegación centrados [cite: 25] */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex; /* Navegación en fila [cite: 25] */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white; /* Texto blanco */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #7a5f4f;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f7e7ce; /* Fondo beige claro [cite: 27] */
+    color: #333; /* Texto oscuro [cite: 27] */
+    text-align: center; /* Hero centrado [cite: 25] */
+    padding: 80px 20px; /* Padding amplio [cite: 25] */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px; /* Asegura un buen espacio vertical */
+}
+
+.hero-content h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    max-width: 600px;
+}
+
+/* Menu Section */
+.menu-section {
+    background-color: #f0e6da; /* Fondo beige suave [cite: 27] */
+    color: #333; /* Texto oscuro [cite: 27] */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.menu-cards {
+    display: flex; /* Usar Flexbox para tarjetas [cite: 25] */
+    flex-wrap: wrap; /* Adaptación automática con "flex-wrap" [cite: 25] */
+    justify-content: center; /* Tarjetas de productos distribuidas con espacio entre ellas [cite: 25] */
+    gap: 30px; /* Espacio entre las tarjetas */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu-cards .card {
+    background-color: white; /* Fondo suave [cite: 25] */
+    border: 1px solid #e0d8cc;
+    border-radius: 10px; /* Bordes redondeados [cite: 25, 27] */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    flex: 1 1 280px; /* Ancho flexible con un mínimo de 280px */
+    max-width: 300px; /* Limita el ancho máximo para evitar que se estiren demasiado */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.menu-cards .card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-cards .card h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #5C4033;
+}
+
+.menu-cards .card p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #5C4033; /* Fondo marrón oscuro [cite: 27] */
+    color: white; /* Texto blanco [cite: 27] */
+    text-align: center; /* Footer centrado [cite: 25, 27] */
+    padding: 20px; /* Compacto [cite: 27] */
+    font-size: 0.9em;
+}
+
+/* Responsividad con Media Queries [cite: 25, 28] */
+
+/* Escritorio (>1024px) - Todo en filas, tarjetas alineadas [cite: 29] */
+/* Los estilos base ya cubren esto. */
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        flex-direction: column; /* Reorganizar navegación en columna en tablets [cite: 25, 29] */
+        text-align: center;
+        padding: 0 15px;
+    }
+    .nav-links {
+        margin-top: 15px;
+        flex-direction: column; /* Menú de navegación en columna [cite: 29] */
+    }
+    .nav-links li {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .nav-links li a {
+        padding: 10px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em; /* Ajustar tamaños de fuente [cite: 25] */
+    }
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .menu-cards .card {
+        flex: 1 1 220px; /* Ajuste para que quepan 2 o 3 tarjetas de forma más fluida */
+    }
+}
+
+/* Móvil (<480px) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .nav-links {
+        flex-direction: column; /* Todo en una sola columna [cite: 29] */
+        width: 100%;
+    }
+    .nav-links li {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .nav-links li a {
+        padding: 8px 0;
+        font-size: 0.9em; /* Texto más pequeño [cite: 25, 29] */
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+    .hero-content h1 {
+        font-size: 2em; /* Ajustar tamaños de fuente [cite: 25] */
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .menu-section {
+        padding: 30px 15px;
+    }
+    .menu-section h2 {
+        font-size: 2em;
+    }
+    .menu-cards {
+        flex-direction: column; /* Las tarjetas también en una sola columna [cite: 29] */
+        align-items: center; /* Centrar las tarjetas */
+    }
+    .menu-cards .card {
+        width: 90%; /* Ocupan un gran porcentaje del ancho disponible */
+        max-width: 350px; /* Limita el ancho para que no se extiendan demasiado */
+    }
+}

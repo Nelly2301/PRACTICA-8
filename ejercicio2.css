@@ -1,0 +1,32 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Los elementos se envuelven (wrap) si no caben en una línea [cite: 6] */
+    align-items: center; /* Los elementos centrados en el eje transversal [cite: 6] */
+    border: 2px solid #333;
+    height: 300px; /* Para visualizar el efecto wrap */
+    background-color: #f0f0f0;
+    margin: 20px;
+    justify-content: center; /* Opcional: Centrar horizontalmente cuando hay espacio */
+}
+
+.flex-container div {
+    background-color: lightgreen;
+    padding: 15px;
+    border: 1px solid #666;
+    margin: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    flex-basis: 150px; /* Una base para que puedan envolverse */
+}
+
+/* Media query para pantallas menores a 600px [cite: 5] */
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column; /* Los elementos se muestran en columna [cite: 5] */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+    .flex-container div {
+        width: 90%; /* Ocupan casi todo el ancho */
+        max-width: 300px; /* Limita el ancho en pantallas muy grandes pero estrechas */
+    }
+}

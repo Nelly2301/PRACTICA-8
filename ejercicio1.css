@@ -1,0 +1,18 @@
+.flex-container {
+    display: flex; /* Habilita Flexbox */
+    justify-content: space-around; /* Distribuye elementos con espacio uniforme entre ellos [cite: 3] */
+    align-items: center; /* Centra los elementos verticalmente en el contenedor [cite: 4] */
+    border: 2px solid #333;
+    height: 200px; /* Para visualizar el centrado vertical */
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+.flex-container div {
+    background-color: lightblue;
+    padding: 10px; /* Añade un padding de 10px a cada elemento [cite: 4] */
+    border: 1px solid #666;
+    margin: 5px;
+    font-size: 1.2em;
+    text-align: center;
+}

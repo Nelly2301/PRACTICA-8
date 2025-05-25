@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    text-align: center;
+}
+
+.card-container {
+    display: flex; /* Usa Flexbox [cite: 12] */
+    flex-wrap: wrap; /* Las tarjetas pasarán a una columna si el contenedor es muy pequeño [cite: 14] */
+    justify-content: space-around; /* Mostrarlas en una fila con espacio igual entre ellas [cite: 12] */
+    padding: 20px;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.card {
+    flex: 1 1 200px; /* Que las tarjetas tengan un ancho flexible pero mínimo de 200px [cite: 13] */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex; /* Para organizar el contenido interno de la tarjeta */
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+}
